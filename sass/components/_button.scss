@@ -60,10 +60,15 @@
     &:focus {
         background-color: var(--active-button);
         }
+
+     @media screen and (max-width: 1199px) {
+         margin-left: auto;
+            margin-right: auto;
+        }
 }
 
 .btn-footer__icon {
-    margin-left: 10px;
+    margin-left: 10px;   
 }
 
 

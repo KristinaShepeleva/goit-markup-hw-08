@@ -132,6 +132,12 @@ li {
 .footer__logo {
   margin-bottom: 20px;
   padding: 0;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer__logo {
+    text-align: left;
+  }
 }
 
 /* Header */
@@ -350,6 +356,12 @@ li {
 }
 .btn-footer:active, .btn-footer:hover, .btn-footer:focus {
   background-color: var(--active-button);
+}
+@media screen and (max-width: 1199px) {
+  .btn-footer {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .btn-footer__icon {
@@ -624,16 +636,6 @@ li {
 .team-member__content {
   padding-top: 30px;
   padding-bottom: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 @media screen and (min-width: 1200px) {
   .team-member__content {
@@ -661,6 +663,19 @@ li {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .social-links {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
 }
 
 .social {
@@ -784,7 +799,7 @@ li {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .footer-contacts {
     margin-bottom: 60px;
   }
@@ -800,10 +815,18 @@ li {
   margin-top: 9px;
 }
 
+.address__contact {
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .address__contact {
+    text-align: left;
+  }
+}
+
 .address__link {
   display: inline-block;
   line-height: 1.71;
-  text-align: center;
   font-style: normal;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.6);
@@ -819,11 +842,6 @@ li {
 }
 .address__link--white {
   color: var(--whity-color);
-}
-@media screen and (min-width: 1200px) {
-  .address__link {
-    text-align: left;
-  }
 }
 
 .footer-title {
@@ -854,7 +872,8 @@ li {
 }
 
 .footer-input {
-  width: 450px;
+  min-width: 100%;
+  max-width: 450px;
   height: 50px;
   padding: 15px 16px;
   color: var(--whity-color);
