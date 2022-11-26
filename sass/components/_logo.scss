@@ -1,0 +1,37 @@
+// header lofo
+
+.logo {
+    display: block;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    text-align: left;
+    text-decoration: none;
+
+    &__first {
+            color: var(--accent-color);
+        }
+    
+    &__second--grey {
+            color: var(--black);
+        }
+}
+
+.logo__head {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+
+ //footer logo
+
+.logo__second--whity {
+    color: var(--whity-color);
+}
+
+.footer__logo {
+    margin-bottom: 20px;
+    padding: 0;
+}
+ 

@@ -1,0 +1,27 @@
+:root {
+    --primary-text-color: #757575;
+    --titly-text-color: #212121;
+    --accent-color: #2196f3;
+    --active-button: #188CE8;
+    --whity-color: #ffffff;
+    --background-color: #f5f4fa;
+    --background-dark: #2f303a;
+    --black: #000000;
+    --icon-color: #AFB1B8;
+    --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --duration: 250ms;
+    --font-family: "Roboto", sans-serif;
+}
+
+
+// h2 title
+
+.title {
+    color: var(--titly-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
