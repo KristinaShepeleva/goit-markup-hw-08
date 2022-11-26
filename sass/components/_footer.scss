@@ -55,9 +55,6 @@
     &--white {
         color: var(--whity-color);
         }
-
-    
-
 }
 
 .footer-title {
@@ -84,11 +81,9 @@
 }
 
 .footer-input {
-    min-width: 100%;
-    max-width: 450px;
     height: 50px;
     padding: 15px 16px;
-    
+    display: block;
     color: var(--whity-color);
     outline: none;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -98,19 +93,29 @@
 
     transition: border var(--duration) var(--transition-timing-function);
 
-    &:focus-within {
-            border: 1px solid var(--accent-color);
+    @media screen and (max-width: 479px) {
+        width: 100%;
+        margin-bottom: 20px;
         }
 
-
-    @media screen and (max-width: 1199px) {
-        margin-bottom: 20px;
-         }
-
+    @media screen and (min-width:480px) and (max-width: 1199px) {
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;  
+        }
+    
     @media screen and (min-width: 1200px) {
             margin-right: 12px;
             width: 358px;
         }
+
+
+    &:focus-within {
+            border: 1px solid var(--accent-color);
+        }
+
+    
 }
 
 
