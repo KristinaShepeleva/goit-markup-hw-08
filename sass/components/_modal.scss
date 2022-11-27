@@ -25,7 +25,7 @@
 
     transform: translateX(-50%) translateY(-50%) scale(1);
 
-    width: 528px;
+    width: 100%;
     min-height: 581px;
     padding: 40px;
 
@@ -34,6 +34,14 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 
     transition: transform var(--duration) var(--transition-timing-function), box-shadow var(--duration) var(--transition-timing-function);
+
+    @media screen and (min-width:480px) and (max-width: 1199px) {
+            width: 450px; 
+        }
+
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+        }
 }
 
 .backdrop.is-hidden .modal {
@@ -123,18 +131,30 @@
     color: rgba(117, 117, 117, 0.5);
 }
 
+
+
 .form-checkbox {
     position: relative;
     display: flex;
+    
     align-items: center;
-    justify-content: center;
-    gap: 7px;
+    justify-content: start;
+    
     margin-bottom: 30px;
+    padding-left: 36px;
 
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.714;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        }
+}
+
+.form-checkbox__text {
+    display: block;
 }
 
 .form-checkbox__input {

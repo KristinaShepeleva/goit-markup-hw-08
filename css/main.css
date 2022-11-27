@@ -408,14 +408,26 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 50px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
 }
-
-.button-list__item:not(:last-child) {
-  margin-right: 8px;
+@media screen and (min-width: 768px) {
+  .button-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .button-list {
+    margin-bottom: 50px;
+  }
 }
 
 .radio-button {
@@ -994,7 +1006,7 @@ li {
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
           transform: translateX(-50%) translateY(-50%) scale(1);
-  width: 528px;
+  width: 100%;
   min-height: 581px;
   padding: 40px;
   background-color: var(--whity-color);
@@ -1005,6 +1017,16 @@ li {
   transition: -webkit-transform var(--duration) var(--transition-timing-function), -webkit-box-shadow var(--duration) var(--transition-timing-function);
   transition: transform var(--duration) var(--transition-timing-function), box-shadow var(--duration) var(--transition-timing-function);
   transition: transform var(--duration) var(--transition-timing-function), box-shadow var(--duration) var(--transition-timing-function), -webkit-transform var(--duration) var(--transition-timing-function), -webkit-box-shadow var(--duration) var(--transition-timing-function);
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -1124,15 +1146,24 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 7px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   margin-bottom: 30px;
-  font-size: 14px;
+  padding-left: 36px;
+  font-size: 12px;
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .form-checkbox {
+    font-size: 14px;
+  }
+}
+
+.form-checkbox__text {
+  display: block;
 }
 
 .form-checkbox__input {
@@ -1182,8 +1213,20 @@ li {
 }
 
 .work {
-  -ms-flex-preferred-size: calc((100% - 60px) / 3);
-      flex-basis: calc((100% - 60px) / 3);
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+@media screen and (min-width: 768px) {
+  .work {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .work {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .work__link {
