@@ -15,25 +15,29 @@
 }
 
 .nav-list {
-    display: flex;
+    display: none;
 
+    @media screen and (min-width: 768px) {
+            display: flex;
+            
     &__item {
-            position: relative;
-        }
-
+    position: relative;
+            }
+            
     &__item:not(:first-child) {
-            margin-left: 50px;
+        margin-left: 50px;
+            }
+            
+    &__item:first-child {
+        margin-left: 93px;
+            }
         }
     
-    &__item:first-child {
-            margin-left: 93px;
-        }
 }
 
 .link {
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    
 
     font-weight: 500;
     font-size: 14px;
@@ -50,6 +54,19 @@
     &:hover, &:focus {
             color: var(--accent-color);
         }
+}
+
+.link--padding {
+   padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.link--padding-desktop {
+
+    @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+        }   
 }
 
 .current {
@@ -70,23 +87,38 @@
 }
 
 .head-contacts {
-    display: flex;
-    margin-left: auto;
+    @media screen and (max-width: 767px) {
+            display: none;
+        }
+    
+    @media screen and (min-width: 768px) {
+        margin-left: auto;
+        }
 
-    &__item:not(:first-child) {
-        margin-left: 50px;
-        }
-    
-    &__link {
-        display: flex;
-        align-items: center;
-        }
-    
-    &__icon {
-        display: block;
-    
-        fill: currentColor;
-        margin-right: 10px;
+    @media screen and (min-width: 1200px) {
+    display: flex;
         }
 }
 
+   .head-contacts__item:not(:first-child) {
+       
+    @media screen and (min-width: 1200px) {
+                margin-left: 50px;
+            }
+   }
+
+   .head-contacts__link {
+       display: flex;
+       align-items: center;
+
+    @media screen and (max-width: 1199px) {
+            margin-bottom: 10px;
+        }
+   }
+
+   .head-contacts__icon {
+       display: block;
+
+       fill: currentColor;
+       margin-right: 10px;
+   }
