@@ -6,18 +6,46 @@
     padding-top: 118px;
     padding-bottom: 118px;
 
-    background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url(../image/hero.jpg);
+    text-align: center;
+    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
-    text-align: center;
     background-color: var(--background-dark);
+    
+    /* mobile 1x */
+    background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url(../image/hero-bg/header-imgmob@1x.jpg);
 
+    /* mobile 2x */
+    @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url(../image/hero-bg/header-imgmob@2x.jpg);
+        }
+    /* tablet 1x */
+        @media screen and (min-width: 481px) {
+        background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url(../image/hero-bg/header-imgtab@1x.jpg);
+        /* tablet 2x */
+        @media screen and (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url(../../image/hero-bg/header-imgtab@2x.jpg);
+            }
+    }
+
+        /* desktop 1x */
     @media screen and (min-width: 1200px) {
             height: 600px;
             padding-top: 200px;
             padding-bottom: 200px;
+
+            background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url(../image/hero-bg/imgdesk@1x.jpg);
+            /* desktop 2x */
+            @media screen and (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url(../image/hero-bg/imgdesk@2x.png);
+                }
         }  
 }
 
