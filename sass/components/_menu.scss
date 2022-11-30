@@ -105,6 +105,7 @@
 .menu-social {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
     align-items: center;
     justify-content: flex-start;
 }
@@ -112,10 +113,6 @@
 .menu-social__item {
     display: inline-flex;
     align-items: center;
-
-    &:not(:last-child) {
-            margin-right: 10px;
-        }
 }
 
 .menu-social__link {
@@ -123,7 +120,7 @@
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.02em;
-     color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 .menu-social__item:not(:last-child)::after {
