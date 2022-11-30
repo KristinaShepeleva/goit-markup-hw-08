@@ -41,11 +41,14 @@
     padding-top: 30px;
     padding-bottom: 24px;
     
-    
-    
     @media screen and (min-width: 1200px) {
         padding-bottom: 30px;
         }
+}
+
+.team-member__img {
+    width: 100%;
+    height: auto;
 }
 
 .team-member__name {

@@ -723,6 +723,11 @@ li {
   }
 }
 
+.team-member__img {
+  width: 100%;
+  height: auto;
+}
+
 .team-member__name {
   margin-bottom: 10px;
   color: var(--titly-text-color);
